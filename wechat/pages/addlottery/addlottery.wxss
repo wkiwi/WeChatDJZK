@@ -1,0 +1,21 @@
+.container{padding:30rpx;background:#fff;font-size:35rpx;height:100%;}
+.change_pic{position:absolute;top:20rpx;right:20rpx;background-color:rgba(255,255,255,0.9);border:1px solid #666;padding:8rpx 12rpx;color:#aaa;font-size:25rpx;}
+.line{height:100rpx;border-bottom:1rpx solid #f3f3f3;line-height:100rpx;overflow:hidden;}
+.line input{line-height:100rpx;height:100rpx;width:400rpx;text-align: right;}
+.line .number{padding-right:50rpx}
+.btn{width:680rpx;height:100rpx;text-align: center;line-height:100rpx;font-size:40rpx;color:#fff;background:#f40;margin:0 auto;}
+
+.btn_background{position:fixed;bottom:0;left:0;width:100%;height:100rpx;padding:30rpx 0;z-index:100;background:#fff;}
+.picker{width:100rpx;text-align: center;}
+.tip{font-size:20rpx;width:210rpx;color:#fff;background:#f40;height:50rpx;line-height:50rpx;text-align: center;margin:25rpx 0;margin-right:20rpx;border-radius:5rpx;}
+.time{display:inline-block}
+
+.kaijiang{width:250rpx;height:250rpx;border-radius:125rpx;background:#f50;text-align: center;line-height: 250rpx;font-size:50rpx;margin:60rpx auto;margin-bottom:50rpx;color:#fff; box-shadow:0 0 50rpx rgba(255,85,0, .5);  }
+
+.title{text-align: center;margin-bottom:30rpx;}
+.times{color:#666;font-size:25rpx;}
+
+.usernumber{color:#666;font-size:25rpx;}
+.tips{text-align: center;color:#f40;}
+.message{height:500rpx;}
+textarea{width:640rpx;height:340rpx;padding:20rpx;border-radius:10rpx;border:1px solid #ccc;}

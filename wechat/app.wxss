@@ -1,0 +1,272 @@
+/**app.wxss**/
+page{
+  background: #f3f5f3;
+  color:#333;
+}
+.aaa{
+  color:#aaa;
+}
+.red{
+  color:#F10000;
+}
+.feng{
+  color:#F54069;
+}
+.cheng{
+  color:#FF9960;
+}
+.cheng2{
+  color:#FF6600;
+}
+.six{
+  color:#666;
+}
+.fl{
+  float:left;
+}
+.fr{
+  float:right;
+}
+.green{
+  color:#308113;
+}
+.clearboth{
+  clear:both;
+  
+}
+
+/***************/
+.all-goods{overflow:hidden;}
+.goods-item .jd{height:35rpx;width:35rpx;display:inline-block;}
+.goods-item{
+  height:510rpx;
+  width:370rpx;
+  float:left;
+  margin-left:5rpx;
+  margin-bottom:5rpx;
+  overflow:hidden;
+  background-color:#fefefe;
+}
+.goods-item image{
+  width:370rpx;
+  height:370rpx;
+}
+.goods-content{
+  width:370rpx;
+  height:130rpx;
+  overflow:hidden;
+  padding-left:15rpx;
+}
+.goods-title{
+  font-size:25rpx;
+  height:35rpx;
+  line-height:35rpx;
+  white-space: nowrap;
+  word-break: keep-all;
+  text-overflow: ellipsis;
+  overflow:hidden;
+  color:#333;
+  padding-right:15rpx;
+}
+.goods-price{
+  height:35rpx;
+  overflow:hidden;
+  font-size:20rpx;
+  line-height:35rpx;
+  padding-right:40rpx;
+}
+.goods-original{
+  float:left;
+  text-decoration:line-through;
+}
+
+.goods-discounts{
+  height:60rpx;
+  overflow:hidden;
+  font-size:30rpx;
+  padding-right:40rpx;
+  line-height:60rpx;
+}
+
+.goods-Qprice{
+  float:left;
+  background-image: url("https://api.taoxiaobao.top/imgs/quan-mini.png");
+  background-size:100% 100%;
+  color:#fff;
+  border-radius: 10rpx;
+  font-size:26rpx;
+  text-align: center;
+  width:130rpx;
+}
+/***********************/
+/*.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} */
+/*******标题价格等********/
+.detail-goods-pic{width:750rpx;}
+.detail-goods-title-content{padding:20rpx;overflow:hidden;background:#fff;}
+.detail-goods-title-content image{height:35rpx;width:35rpx;float:left;margin-right:10rpx;}
+.detail-goods-title{font-size:35rpx;}
+.detail-goods-price-volume{background-color:#fff;overflow:hidden;padding:20rpx;font-size:25rpx;height:50rpx;line-height:50rpx;}
+.detail-goods-qanhou{background: linear-gradient(to right,#FF9800,#FF2420);color:#fff;padding:0 10rpx;border-radius:10rpx; }
+.detail-goods-qanhou-price{font-size:30rpx;margin-left:30rpx;}
+.detail-goods-yuan-price{margin-left:60rpx;text-decoration:line-through;}
+/************推荐***********/
+.Introduce{background:#fff;color:#808080;font-size:25rpx;margin-top:15rpx;padding:15rpx 20rpx;}
+.Introduce .text{border:1px solid #ff3c29;display:inline-block;padding:4rpx 5rpx; margin-right:20rpx;}
+.ling-quan{position:relative;background:#fff;padding:30rpx 0;}
+.ling-quan image{display:block;margin:0 auto;width:650rpx;}
+.ling-quan .quan-price{position:absolute;z-index:10;color:#fff;left:150rpx;top:30rpx;height:150rpx;line-height:150rpx;}
+.ling-quan .lijilingquan{position:absolute;z-index:10;color:#fff;right:100rpx;top:30rpx;height:150rpx;line-height:150rpx;padding-left:30rpx;border-left:2px dotted #fff;}
+
+/**********店铺*********/
+.shop{background: #fff;margin-top:15rpx;overflow:hidden;font-size:30rpx;padding:30rpx 30rpx;}
+.shop-pic{width:130rpx;height:130rpx;margin-left:30rpx;border:1px solid #f1f1f1;}
+.shop-pic image{width:130rpx;height:130rpx;}
+.shop-content{overflow:hidden;margin-top:30rpx;}
+.shop-title{margin:20rpx 0 20rpx 220rpx;}
+.shop-type-icon{height:40rpx;}
+.shop-all-goods{width:220rpx;text-align: center;line-height:60rpx;}
+.fans{width:220rpx;text-align: center;line-height:60rpx;border-left:1px solid #f1f1f1;}
+.shop-score{width:205rpx;text-align: center;font-size:25rpx;border-left:1px solid #f1f1f1;padding-left:41rpx;}
+.score-text{color:#fff;border-radius:5rpx;height:35rpx;line-height:35rpx;width:35rpx;text-align:center;margin-left:20rpx;}
+.score-text.height{background:#ff3000;}
+.score-text.low{background:#23D2BD;}
+.miaoshu{overflow:hidden;width:100%;height:40rpx;}
+.fuwu{overflow:hideden;width:100%;height:40rpx;}
+.wuliu{overflow:hideden;width:100%;height:40rpx;}
+.score-number{overflow:hideden;margin-left:15rpx;}
+
+
+/******评价********/
+.evaluateAll{background-color:#fff;margin-top:15rpx;font-size:30rpx;padding:30rpx 20rpx;color:#333;}
+.evaluate-all-words{overflow:hidden;font-size:25rpx;margin-bottom:30rpx;color:#999}
+.evalute-words{padding:10rpx 20rpx;border-radius:35rpx;background:#FFEEEE;height:35rpx;line-height:35rpx;margin:15rpx 8rpx;}
+.evaluate-line{overflow:hidden;}
+.evaluate{text-align: center;margin-bottom:40rpx;}
+.evaluateDate{font-size:25rpx;}
+.evaluateCanshu{font-size:25rpx;}
+.evaluateMore{border:1px solid #F10000;padding:8rpx 15rpx;border-radius:8px;margin:0 auto;margin-top:40rpx;width:175rpx;display:block;text-align: center;height:50rpx;line-height:50rpx;font-size:25rpx;}
+.evaluateContent{padding:10rpx;}
+/********详情图与规格************/
+.deail-specifications{background-color:#fff;margin-top:15rpx;font-size:30rpx;padding:30rpx 20rpx;color:#333;}
+.deail-specifications .btn{border:1px solid #F10000;overflow:hidden;height:100rpx;line-height:100rpx;color:#F10000;margin-bottom:30rpx;}
+.detail{width:350rpx; text-align:center;border-right:1px solid #F10000;}
+.specifications{width:352rpx;text-align:center;border-left:1px solid #F10000;}
+.deail-specifications .on{background:linear-gradient(to right,#FF9800,#FF2420);color:#fff;}
+.specifications-content{background:#fff;margin-bottom:150rpx;font-size:28rpx;}
+.specifications-content .line{border-bottom:1px solid #f1f1f1;padding:8rpx 15rpx;line-height:50rpx;}
+.specifications-content .line .name{color:#333;margin-right:10rpx;display:inline;}
+.specifications-content .line .value{display:inline;}
+.ItemDescx{overflow:hidden;margin-bottom:150rpx;}
+.ItemDescximg{width:750rpx;}
+.ItemDescximg image{width:750rpx;}
+
+
+.anniu{position:fixed;width:210rpx;border-top-left-radius: 50rpx;border-bottom-left-radius: 50rpx;background-color: rgba(000, 000, 000, 0.4);left:570rpx;color:#fff;font-size:30rpx;z-index: 50;height:50rpx;line-height:50rpx;padding-left:20rpx;padding-right:15rpx;
+}
+.picture{top:150rpx;}
+.transmit{top:300rpx;}
+.all_feng{position:fixed;z-index: -70;left:-1300px;}
+.fenxiang{display:block;width:650rpx;height:930rpx;border:1px solid #999;border-radius:10rpx;position:absolute;top:100rpx;left:49rpx;z-index: 70;overflow: hidden;background-color:#FC7D54;}
+.close{width:50rpx;height:50rpx;line-height: 50rpx;text-align: center;border-radius: 50%;position:relative;left:675rpx;color:#fff;top:75rpx;background-color:#333;z-index:80;}
+.fenxiang image{width:650rpx;display:block;}
+.back{width: 50rpx;height:50rpx;position:fixed;top:20rpx;left:20rpx;z-index:50;border-radius:40rpx;overflow:hidden;background:rgba(000, 000, 000, 0.5);padding:10rpx}
+.back image{width:100%;height:100%;}
+.back_top{width: 70rpx;height:70rpx;position:fixed;bottom:220rpx;right:30rpx;z-index:50;border-radius:50rpx;overflow:hidden;}
+.back_top image{width:100%;height:100%;}
+.bottom_btn{width:100%;height:100rpx;box-shadow:0rpx 0rpx 15rpx #fff;position:fixed;bottom:0rpx;background-color:#fff;overflow:hiden;line-height:100rpx;color:#D1D1D1;z-index:1000}
+.bottom_btn .left{float:left;width:70%;height:100rpx;}
+.bottom_btn .right{float:left;width:30%;background:linear-gradient(to right, #FF7037,#FF2320);height:100rpx;color:#fff;text-align:center;}
+.left_content{overflow:hidden;margin-left:50rpx;font-size:25rpx;}
+.left_content .text{float:left;}
+.quanhoujia{color:#f40;float:left;margin-left:15rpx}
+.yuanjia{text-decoration:line-through;float:left;margin-left:15rpx}
+
+.detail-swiper image{width:750rpx;height:750rpx;}
+.detail-swiper{width:750rpx;height:750rpx;}
+
+.img-background{background:#fff;}
+.img-plus-style {  height: 70rpx;  width: 70rpx;  position: absolute;  bottom: 350rpx;  right: 30rpx;  z-index: 100;  border-radius:40rpx;background:rgba(000, 000, 000, 0.4)}  
+.img-style {  height: 70rpx;  width: 70rpx;  position: absolute;  bottom: 350rpx;  right: 30rpx;opacity: 0; border-radius:40rpx;z-index: 100; }  
+.zhezhao{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(000,000,000,0.3);z-index:99;}
+.caidan-zhuan{   overflow:inherit }
+
+/*.tab-bar{height:100rpx;position:fixed;bottom:0;background:#fff;padding:10rpx 0;font-size:25rpx;}
+.tab-bar navigator{float:left;width:187.5rpx;display:block;text-align: center;}
+.tab-bar image{width:60rpx;}*/
+
+.mode-input {width:650rpx;margin:0 auto;position:fixed;top:200rpx;z-index:300;background:#fff;border-radius:10rpx;overflow:hidden;left:50rpx;height:700rpx;font-size:30rpx;}
+.mode-input-header{color:#fff;background:linear-gradient(to bottom,#FF9800,#FF2420);width:100%;height:100rpx;line-height:100rpx;text-align: center;font-size:35rpx;}
+.mode-input-content{width:590rpx;padding:30rpx;}
+.mode-input-tip{color:#333;text-align: center;}
+.mode-input textarea{width:530rpx;height:210rpx;overflow:hidden;border:1px dotted #ccc;color:#666;font-size:30rpx;padding:30rpx;text-align: center;border-radius: 10rpx;}
+.mode-input-tip-b{color:#23D2BD;text-align: center;margin-top:5rpx;}
+.mode-input-bottom{background:#f3f3f3;color:#D5534E;padding: 30rpx;height:150rpx;}
+.closekouling{position:absolute;right:30rpx;top:30rpx;font-size:40rpx;width:50rpx;height:50rpx;display:block;}
+
+.to-index{color:#000;width:200rpx;text-align:left;height:100rpx;font-size:35rpx;}
+.bottom_btn image{width:50rpx;float:left;margin:20rpx 10rpx 0 0;}
+button.to-zhuan{color:#000;border:none;display:inhert;background:#fff;padding:0;margin:0;position:inhert;font-size:35rpx;margin-top:10rpx;text-align:left;}
+
+button::after{
+border: none;
+}
+
+/***card样式*****/
+.card-container {
+  background:#fff;
+  height: 1200rpx;
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30rpx 0;
+  box-sizing: border-box;
+} 
+.card-container form{
+    width: 80%;
+    margin:0 auto;
+}
+
+.card-container .seachInput{
+  border-radius: 5px;
+  font-size: 12px;
+  line-height: 30px;
+  width:70%;
+  padding: 5px 5px 5px 10px;
+  background-color: #F5F4F9;
+  float: left; 
+}
+
+.card-container .seachButtom{
+    width: 18%;
+    line-height: 35px;
+    font-size: 12px;
+    float: left;
+    border-radius: 5px;
+    margin: 0 0 0 5%;
+    padding: 0;
+}
+
+.card-container .paragraphs{
+    width: 80%;
+    margin-top: 30px;
+    font-size: 12px;
+    text-align: left;
+}
+.card-container .paragraph{
+    margin: 0 auto;
+    line-height: 25px;
+}
+.card-container .hint{
+    font-size: 12px;
+    color: #808080;
+    margin: 15px;
+}

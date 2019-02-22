@@ -1,0 +1,43 @@
+<view class="ranking">
+  <view bindtap="swichRank" data-current="0" class="aniu all_rank {{currentRank==0 ? 'on' : ''}}">人气排名 <view class="sc">{{sc_text[sc_number]}}</view></view>
+  <view bindtap="swichRank" data-current="1" class="aniu number_rank {{currentRank==1? 'on' : ''}}">销量排名<view class="sc">降序</view></view>
+  <view bindtap="swichRank" data-current="2" class="aniu price_rank {{currentRank==2 ? 'on' : ''}}">价格排名<view class="sc">{{sc_text[sc_number]}}</view></view>
+  <view bindtap="swichRank" data-current="3" class="aniu quan_rank {{currentRank==3 ? 'on' : ''}}">最新排名<view class="sc">{{sc_text[sc_number]}}</view></view>
+</view>
+
+<view  class='all-goods'>
+    <view wx:for="{{couponList}}" wx:key="item.ItemID" bindtap="setCouponInfo" data-index="{{index}}" class="goods-item">
+         <image src="{{item.goods_pic}}" mode="widthFix" lazy-load="true"></image> 
+         <view class="goods-content">
+         <view class="goods-title"><image  class="jd" src="../../images/jd.png" wx:if="{{!loging}}"></image>{{item.goods_short_title}}</view>
+          <view class="goods-price">
+            <view class="goods-original six">原价：￥{{item.goods_price}}</view>
+            <view class="fr six">销量：{{item.goods_sales}}</view>
+          </view>
+          <view class="goods-discounts">
+            <view class="goods-Qprice">{{item.coupon_price}}元</view>
+            <view class="fr red">券后：{{item.quanhou}}</view>
+          </view>
+        </view>
+    </view><!--wx:for-->
+  </view><!--/.all-goods-->
+  <loading hidden="{{hiddenLoading}}">正在加载</loading>
+
+<!-- <view  class="tab-bar">
+  <navigator url="../index/index" open-type="redirect">
+  <image src="../../images/home1.png" mode="widthFix"></image>
+    <view >首页</view>
+  </navigator>
+  <navigator url="../search/search" open-type="redirect">
+  <image src="../../images/quan1.png" mode="widthFix"></image>
+    <view>超级搜</view>
+  </navigator>
+  <navigator url="../classify/classify" open-type="redirect">
+  <image src="../../images/select_lei.png" mode="widthFix"></image>
+    <view class="red">商品分类</view>
+  </navigator>
+  <navigator url="../user/user" open-type="redirect">
+  <image src="../../images/user.png" mode="widthFix"></image>
+    <view>我的</view>
+  </navigator>
+</view> -->

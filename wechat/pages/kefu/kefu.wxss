@@ -1,0 +1,4 @@
+/* pages/kefu/kefu.wxss */
+page{font-size:35rpx;text-align: center;color:#333;line-height:100rpx;}
+image{width:500rpx;display:block;margin:30rpx auto;}
+.shuoming{margin-top:30rpx;margin-bottom:100rpx;}

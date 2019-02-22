@@ -1,0 +1,169 @@
+<scroll-view id="page-detail" style="height: 100%;" scroll-y="true" bindscroll="scroll" scroll-top="{{scrollTop}}">
+<view class="mode-input" wx:if="{{input}}">
+  <image src="../../images/close.png" class="closekouling" bindtap="closekouling"></image>
+  <view class="mode-input-header">淘口令购买</view>
+  <view class="mode-input-content">
+    <view class="mode-input-tip">点击框内文字>长按框内>全选>复制</view>
+    <textarea value="{{itemDetails.title}},原价{{itemDetails.zk_final_price}}元，领券后【{{quanhou_price}}】元，复制这条消息，打开 [ 手机淘宝 ] 领券下单{{taoKouLing}}"/>
+    <view class="mode-input-tip-b">复制成功后打开淘宝购买即可</view>
+  </view>
+  <view class="mode-input-bottom">使用说明: 复制淘口令后打开淘宝，等待1~3秒，等待优惠券弹框，点击打开，下单自动抵扣。</view>
+</view>
+  <view class="back" bindtap='backhome'>
+    <image src="../../images/icon-home.png"></image>
+  </view><!--/.back-->
+     <view class="all_feng" style="display:{{fengxiang}}">
+     <view class="close" bindtap='close'>X</view>
+     <canvas canvas-id="my-canvas" style="width:1080px;height:1920px;"></canvas>
+  </view><!--canvaas-分享 -->
+  <!-- <view class="all_feng" style="display:{{fengxiang}}">
+    <view class="close" bindtap='close'>X</view>
+    <view class="fenxiang"> 
+      <image src="{{camera}}" mode="widthFix" bindtap="previewImage"></image>
+    </view>
+  </view>/.all_feng -->
+  <!-- <view class="anniu picture" bindtap='picture' wx:if="{{loging}}">生成分享图</view> -->
+  <!-- <button class="anniu transmit" open-type="share" wx:if="{{loging}}">转发给好友</button> -->
+   <swiper class="detail-swiper" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{detail_images}}">
+    <swiper-item>
+      <image src="{{item}}" lazy-load="true" bindtap="clickBanner" class="detail-goods-pic" />
+    </swiper-item>
+  </block>
+  </swiper><!--轮播图-->
+   <view class="detail-goods-title-content">
+      <image  class="jd" src="../../images/jd.png" wx:if="{{!loging}}" ></image>
+      <image  wx:if="{{loging}}" src="{{itemDetails.user_type==1?'../../images/tmall.png':'../../images/taobao.png'}}"></image>
+      <view class="detail-goods-title six">{{itemDetails.title}}</view>
+   </view><!--/.detail-goods-title-content-->
+   <view class="detail-goods-price-volume six">
+      <view class="detail-goods-qanhou fl">券后价</view>
+      <view class="detail-goods-qanhou-price red fl">￥ {{quanhou_price}}</view>
+      <view class="detail-goods-yuan-price fl">￥ {{itemDetails.zk_final_price}}</view>
+      <view class="detail-goods-volume fr">{{itemDetails.volume}} 人已买</view>
+   </view><!--/.detail-goods-price-volume-->
+   <view class="Introduce">
+   <view class="text red">推荐</view>{{itemDetails.item_description}}
+   </view><!--/.Introduce-->
+  <view class="ling-quan" bindtap="getCoupon" wx:if="{{loging }}">
+      <image src="../../images/quan.png" mode="widthFix"></image>
+      <view class="quan-price">{{itemDetails.coupon_info}}元优惠券</view>
+      <view class="lijilingquan">立即领券</view>
+  </view><!--/.quan-price-->
+    <view class="shop" wx:if="{{loging}}">
+    <view style="overflow:hidden">
+      <view class="shop-pic fl">
+        <image src="https:{{shop.shopIcon}}" mode="widthFix"></image>
+      </view>
+      <view class="shop-title ">{{shop.sellerNick}}</view>
+    </view>
+    <view class="clearboth"></view>
+    <view class="shop-content six">
+      <view class="shop-all-goods fl">
+        <view class="hei">{{shop.allItemCount}}</view>
+        <view>全部宝贝</view>
+      </view>
+      <view class="fans fl">
+        <view class="hei">{{shop.fans}}</view>
+        <view>关注人数</view>
+      </view>
+      
+      <view class="shop-score fl">
+        <view class="miaoshu">   
+          <view class="fl">描述相符</view>  
+          <view class="fl score-number {{ shop.evaluates[0].level>0?'red':'green'}}">{{shop.evaluates[0].score}}</view>
+          <view class="fl {{ shop.evaluates[0].level>0?'height':'low'}} score-text">{{shop.evaluates[0].levelText}}</view>
+        </view>
+        <view class="fuwu  ">
+          <view class="fl">服务态度</view>  
+          <view class="fl score-number {{shop.evaluates[1].level>0?'red':'green'}}">{{shop.evaluates[1].score}}</view>
+          <view class="fl {{ shop.evaluates[1].level>0?'height':'low'}} score-text">{{shop.evaluates[1].levelText}}</view>
+        </view>
+        <view class="wuliu ">
+          <view class="fl">物流服务</view>  
+          <view class="fl score-number {{shop.evaluates[2].level>0?'red':'green'}}">{{shop.evaluates[2].score}}</view>
+          <view class="fl {{ shop.evaluates[2].level>0?'height':'low'}} score-text">{{shop.evaluates[2].levelText}}</view>
+        </view>
+      </view><!--/.shop-score-->
+    </view><!--/.shop-content-->
+  </view><!--/.shop-->
+
+  <view class="evaluateAll">
+    <view class="evaluate">商品评价 ( {{rateListNumber}} )</view>
+    <view class="evaluate-all-words">
+      <view class="evalute-words fl" wx:for="{{Pwords}}">
+      {{item.word}}({{item.count}})
+      </view>
+    </view>
+    <view class="evaluate-line">
+      <view class="evaluateName fl">{{rateList[0].displayUserNick}}</view>
+      <view class="evaluateDate fr six ">{{rateList[0].rateDate}}</view>
+    </view>
+    <view class="evaluateContent ">{{rateList[0].rateContent}}</view>
+    <view class="evaluateCanshu six">{{rateList[0].auctionSku}}</view>
+    <view class="clear"></view>
+    <view class="evaluateMore red" bindtap='evaluate'>查看更多评价</view>
+  </view><!--/.evaluateAll-->
+  <view class="deail-specifications" wx:if="{{loging}}">
+    <view class="btn">
+      <view class="detail fl {{tuwen==true?'on':''}}" bindtap="switchBtn">图文详情</view>
+      <view class="specifications fl {{tuwen==false?'on':''}}" bindtap="switchBtn">产品规格</view>
+    </view> 
+  </view><!--/.deail-specifications-->
+    <view class="clearboth"></view>
+  <view class="ItemDescx " wx:if="{{ tuwen }}" >
+      <view class="ItemDescximg" wx:for="{{ItemDescxImg}}" wx:key="item" data-index="{{index}}" >
+        <image src="{{item}}"  mode="widthFix"></image>
+      </view>
+  </view><!--/.ItemDescx-->
+ <view class="specifications-content six " wx:if="{{ !tuwen }}" >
+    <view wx:for="{{specifications}}" >
+        <view class="line">
+         <view class="name "> {{item.name}} ：</view>
+         <view class="value"> {{item.value}}</view>
+        </view>
+    </view>
+  </view><!--产品详情-->
+  <view class="back_top" bindtap='backTop' wx:if="{{ bottomBtn}}">
+    <image src="../../images/back_top.png"></image>
+  </view>
+  <view class="bottom_btn" wx:if="{{ bottomBtn}}">
+    <view class="left">
+      <view class="left_content">
+        <!-- <view class="text">券后 </view>
+        <view class="quanhoujia"> ￥{{quanhou_price}} </view>
+        <view class="yuanjia"> ￥{{itemDetails.zk_final_price}} </view> -->
+        <image  bindtap='backhome' src="http://api.taoxiaobao.top//imgs/icon/button-home.png"  mode="widthFix"></image>
+        <view class="fl to-index" bindtap='backhome'> 首页</view>
+        <image src="http://api.taoxiaobao.top//imgs/icon/button-fen.png"  mode="widthFix"></image>
+        <button  open-type="share" class="to-zhuan">转发</button>
+      </view>
+    </view>
+    <view class="right" bindtap="getCoupon" >立即领券</view>
+  </view>
+
+    <view class="bottom_btn" wx:if="{{!loging }}">
+    <view class="left">
+      <view class="left_content ">
+        <view class="text">券后 </view>
+        <view class="quanhoujia"> ￥{{quanhou_price}} </view>
+        <view class="yuanjia"> ￥{{itemDetails.zk_final_price}} </view>
+      </view>
+    </view>
+    <view class="right" bindtap="bijia">比价</view>
+  </view>
+<loading hidden="{{hiddenLoading}}">正在加载</loading>
+<modal hidden="{{hidden}}" title="温馨提示" confirm-text="关闭" cancel-text="使用教程" bindcancel="cancel" bindconfirm="confirm" >
+  复制成功！打开淘宝下单即可！
+</modal>
+</scroll-view>
+
+<view class="caidan" wx:if="{{loging}}"> 
+  <button  open-type="share" class="caidan-zhuan">
+  <image src="../../images/tozhuan.jpg" class="img-style" animation="{{animCollect}}" ></image>  
+  </button>
+  <image src="../../images/to-search.jpg" class="img-style" animation="{{animTranspond}}" bindtap="tosearch"></image>  
+  <image src="../../images/totupian.jpg" class="img-style" animation="{{animInput}}" bindtap="picture"></image>  
+  <image src="../../images/caidan.jpg" class="img-plus-style" animation="{{animPlus}}" bindtap="plus"></image>  
+</view> 
+<view class="zhezhao" wx:if="{{zhezhao}}" bindtap="zhezhao"></view>

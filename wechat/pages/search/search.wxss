@@ -1,0 +1,34 @@
+  /* pages/search/search.wxss */
+
+/*.search-background{width:100%;height:200rpx;background:linear-gradient(to bottom,#FF9800,#FF2420);}
+.chaojisou{position:fixed;top:0px;width:750rpx;}
+.course{display:block;margin-top:500rpx;width:750rpx;}
+.search{position: fixed;top: 260rpx;height: 100rpx;width: 100%;display: flex;align-items: center;margin-bottom:95rpx;z-index: 3;}
+.search-input{flex-grow:1;height: 50rpx;margin: 0 30rpx;background-color: #fff;padding: 10rpx 35rpx;padding-right: 80rpx; color: #000;font-size: 30rpx;border-radius: 50rpx;border:1px solid #fff;}
+.input-placeholder{color: #ccc;font-size: 30rpx;}
+.search-label{position: absolute;right: 25rpx;top: 15rpx; z-index: 4;padding: 15rpx 20rpx;}
+.search-img{width: 40rpx;height: 40rpx;}*/
+page{background:#fff}
+.search-background{width:100%;height:190rpx;background:linear-gradient(to bottom,#ff3c29,#FF9800);padding-top:50rpx;}
+.search{height: 100rpx;width: 100%;display: flex;align-items: center;margin-bottom:95rpx;z-index: 3;}
+.search-input{flex-grow:1;height: 50rpx;margin: 0 30rpx;background-color: #fff;padding: 10rpx 35rpx;padding-right: 80rpx; color: #000;font-size: 30rpx;border-radius: 5rpx;border:1px solid #fff;}
+.input-placeholder{color: #ccc;font-size: 30rpx;}
+.search-label{position: absolute;right: 25rpx;top: 68rpx; z-index: 4;padding: 15rpx 20rpx;}
+.search-img{width: 40rpx;height: 40rpx;}
+.sou-or-chaoji{padding:0 20rpx;height:80rpx;line-height:80rpx;border-bottom:1px solid #e1e1e1;position:relative;}
+.all-tip{position:absolute;z-index:10;left:150rpx;top:70rpx;}
+.tip-jiao{opacity: 0.65;width:30rpx;display:block;height:30rpx;margin-left:30rpx;}
+.tip-content{background:rgba(0,0,0,0.65);width:490rpx;height:200rpx;border-radius:10rpx;padding:25rpx;color:#fff;font-size:25rpx;line-height:30rpx;}
+.tip-content-title{font-size:30rpx;text-align: center;padding-bottom:15rpx;}
+.tip-content-text .kong{width:40rpx;display:inline-block;}
+.sou{width:150rpx;text-align: center;margin:0 102rpx;}
+.sou.on{border-bottom:1px solid #ff3c29;}
+.chaoji{width:150rpx;text-align: center;margin:0 102rpx;}
+.chaoji.on{border-bottom:1px solid #ff3c29}
+.all-hotwords{padding:30rpx;font-size:30rpx;}
+.all-hotwords-header{overflow: hidden;}
+.all-hotwords-content{overflow: hidden;margin-top:30rpx;}
+.hot{border:1px solid #f1f1f1;padding:8rpx 20rpx;border-radius:10rpx;margin:8rpx 10rpx;color:#333}
+.search-history{margin-top:30rpx;border-top:1px  dotted #e1e1e1;border-bottom:1px  dotted #e1e1e1;}
+.course{display:block;margin-top:30rpx;width:750rpx;}
+

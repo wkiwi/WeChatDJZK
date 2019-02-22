@@ -1,0 +1,17 @@
+<view  class='all-goods'>
+    <view wx:for="{{couponList}}" wx:key="item.ItemID" bindtap="itemDetails" data-index="{{index}}" class="goods-item">
+         <image src="{{item.pict_url}}" mode="widthFix" lazy-load="true"></image> 
+         <view class="goods-content">
+         <view class="goods-title"><image  class="jd" src="../../images/jd.png" wx:if="{{!loging}}"></image>{{item.title}}</view>
+          <view class="goods-price">
+            <view class="goods-original six">原价：￥{{item.zk_final_price}}</view>
+            <view class="fr six">销量：{{item.volume}}</view>
+          </view>
+          <view class="goods-discounts">
+            <view class="goods-Qprice">{{item.coupon_info}}元券</view>
+            <view class="fr red">券后：{{item.quanhou_price}}</view>
+          </view>
+        </view>
+    </view><!--wx:for-->
+  </view><!--/.all-goods-->
+<loading hidden="{{hiddenLoading}}">正在加载</loading>

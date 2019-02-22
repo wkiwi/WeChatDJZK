@@ -1,0 +1,16 @@
+<!--pages/specification/specification.wxml-->
+<view class="text">更懂你的实时优惠播报站让优惠券触手可及，独家提供被电商网站隐藏的超高折扣的优惠券商品！100%人工审核，实时维护排查，全天持续上新。
+
+</view>
+<view class="title">
+1.怎样下单购买商品、选择您喜欢的商品？
+</view>
+<view class="text">步骤一：小程序内选择心怡商品，立即领券，复制淘口令。</view>
+<view class="text">步骤二：打开手机淘宝APP后，等待1~3秒时间，自动弹出窗口，点击打开>立即领券，跳转商品详情页。</view>
+<view class="text">步骤三：下单自动抵扣,付款即可，坐等收货~~~~~</view>
+<view class="text">温馨提示：所有优惠券都是限时限量，所以选择好优惠券后立即下单，以免优惠券失效哦！</view>
+<view class="title">
+2.其他
+</view>
+<view class="text">如有其他购物问题添加客服微信一对一服务，为您解答！</view>
+

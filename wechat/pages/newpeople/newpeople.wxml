@@ -1,0 +1,14 @@
+<!--pages/newpeople/newpeople.wxml-->
+
+<view class="content">
+  <view wx:for="{{img}}" class="imgs">
+    <image src="{{item}}" mode="widthFix"></image>
+  </view>
+</view>
+<view class="content">
+<text class="text">{{content[0]}}</text>
+<textarea value="{{content[1]}}"></textarea>
+<view class="tip">若一键复制失败 》 请点击框内>全选>复制</view>
+<view class="btn" data-txt="{{content[1]}}" bindtap='copy'>一键复制</view>
+<text class="text">{{content[2]}}</text>
+</view>

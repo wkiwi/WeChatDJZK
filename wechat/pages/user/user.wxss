@@ -1,0 +1,28 @@
+/**index.wxss**/
+page{font-size:30rpx;color:#666;padding-bottom:50rpx;}
+.user-container{padding:30rpx;margin-bottom:15rpx;background:#fff;}
+/*.userinfo {display: flex;flex-direction: column;align-items: center;}*/
+.userinfo-avatar {width: 180rpx;height: 180rpx; margin-right: 50rpx;border-radius: 50%;vertical-align:middle;}
+.userinfo-nickname {color: #333;}
+.sign-day{background:#fff;overflow:hidden;padding:30rpx;margin-bottom:15rpx;}
+.sign-day-title{height:50rpx;line-height:50rpx;border-bottom:1px  dotted #e1e1e1;padding-bottom:20rpx;}
+.sign-day-content{height:70rpx;padding-top:50rpx;}
+.jifen{width:50%;text-align: center;height:70rpx;line-height:70rpx;}
+.sign-day-btn{width:50%;text-align: center;}
+.sign-day-btn .btn{border-radius:10rpx;background-color:#FBE369;width:200rpx;height:70rpx;line-height:70rpx;font-size:35rpx;}
+.all-tool{background:#fff;overflow:hidden;padding:30rpx;margin-bottom:15rpx;}
+.all-tool-title{height:50rpx;line-height:50rpx;padding-bottom:20rpx;}
+.all-tool-content{margin-top:20rpx;overflow:hidden;}
+.dingdan{width:25%;text-align: center;margin-bottom:20rpx;}
+.border{border:1px solid #f1f1f1;padding:30rpx 0;height:120rpx;}
+.dingdan image{width:70rpx;height:70rpx;padding:0rpx;}
+.zhuan{display:inline;padding:0;margin:0;color:#666;background:#fff;line-height:40rpx;font-size:30rpx;}
+.machine{text-align: center;width:300rpx;height:80rpx;line-height:80rpx;border-radius:40rpx;background:#fff;}
+.admin{border-bottom:1px dotted #ccc;overflow:hidden;padding:30rpx;}
+
+.apply-daili{text-align:center;background:#fff;width:320rpx;height:80rpx;line-height:80rpx;border-radius:40rpx;margin:30rpx auto;}
+.myFavorite{text-align:center;background:#fff;width:320rpx;height:80rpx;line-height:80rpx;border-radius:40rpx;margin:30rpx auto;}
+.version{text-align: center;margin-top:50rpx;}
+
+.kefu{width:600rpx;padding: 0 75rpx;background:#fff;text-align: center;}
+.kefu image{width:400rpx;margin:0 100rpx;}

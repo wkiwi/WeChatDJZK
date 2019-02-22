@@ -1,0 +1,18 @@
+<view class="evaluateAll">
+  <view class="evaluate">商品评价 ( {{rateListNumber}} )</view>
+  <view wx:for="{{rateList}}" wx:key="item"  data-index="{{index}}" class="user">
+      <view class="evaluateName">{{item.displayUserNick}}</view>
+      <view class="evaluateDate">{{item.rateDate}}</view>
+      <view class="clear"></view>
+      <view class="evaluateContent">{{item.rateContent}}</view>
+      <view class="evaluateCanshu">{{item.auctionSku}}</view>
+      <view class="clear"></view>
+      <view class="allPic">
+        <view  wx:for="{{item.pics}}"   data-index="{{index}}">
+          <image src="https:{{item}}" class="min_img" mode="aspectFill" bindtap="previewImage"data-url="https:{{item}}"></image>
+        </view>
+      </view>
+      <view class="clear"></view>
+  </view>
+</view>
+<loading hidden="{{hiddenLoading}}">正在加载</loading>

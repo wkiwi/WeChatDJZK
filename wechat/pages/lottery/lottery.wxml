@@ -1,0 +1,62 @@
+<loading hidden="{{hiddenLoading}}">正在生成</loading>
+<view class="canvas-father" style="display:{{pic}};">
+<canvas canvas-id="my-canvas" style="width:1080px;height:1691px;"></canvas>
+</view>
+<view class="back" bindtap='backhome'>
+  <image src="../../images/icon-home.png"></image>
+</view><!--/.back-->
+<view class="sharepic" bindtap='sharepic'>生成分享图</view>
+<image src="http://appi.taoxiaobao.top/imgs/lunbo-3.jpg" mode="widthFix" style="width:100%"> </image>
+<view class="container" wx:if="{{haveorno}}">
+  <view class="title">奖品：{{lotteryDetails.lottery_name}} * {{lotteryDetails.lottery_number}} 人</view>
+  <view class="time">开奖时间 ： {{lotteryDetails.lottery_time}}</view>
+  <!-- <view class="btn" bindtap='toLottery'>{{lotteryText}}</view> -->
+  <form bindsubmit='toLottery' report-submit='true'>
+    <button form-type="submit" class="btn"> {{lotteryText}}</button>
+  </form>
+  <view class="people_number">已有 {{usernumber}} 人参与抽奖 , <view class="all_people" bindtap='allLottery'>查看全部 > </view></view>
+  <view class="all_img" >
+      <view class="img-border" wx:for="{{usermessage}}">
+      <image  src="{{item.user_image}}" mode="widthFix" lazy-load="true"></image>
+      </view>
+  </view>
+</view>
+<view class="container" wx:if="{{!haveorno}}">
+  <view class="history" bindtap='lotteryHistory'>查看中奖历史名单 ></view>
+
+  <view class="nextlottery">本轮结束，等待下一轮抽奖</view>
+</view>
+<view class="message" wx:if="{{haveorno}}">
+  <view class="message-title">奖品介绍</view>
+  <text>{{lotteryDetails.message}}</text>
+</view>
+<view class="specification">
+  <view class="s_title">抽奖说明</view>
+  <text>
+      {{inform}}
+  </text>
+</view>
+
+<view class="zhezhao"  wx:if="{{userLottery}}"></view>
+
+<view class="lottery_box" wx:if="{{userLottery}}">
+  <view class="lottery_box_container">
+    <view class="lottery_box_container_main">
+          <image src="../../images/close.png" class="closed" mode="widthFix" bindtap='close'></image>
+          <view class="main_title">中奖名单</view>
+          <view class="lottery_users">
+              <view class="user_box fl " wx:for="{{lastLottery}}"> 
+                  <view class="user_box_img">
+                    <image src="{{item.user_image}}"  mode="widthFix"></image>
+                  </view>
+                  <view class="user_box_name">{{item.user_name}}</view>
+              </view>
+          </view>
+          <view class="tips">
+            <view class="lottery_name">开奖名称：{{lastLottery[0].lottery_name}}</view><!--/.中奖名称-->
+            <view class="lottery_time">开奖时间：{{lastLottery[0].lottery_time}}</view><!--/.中奖时间-->
+          </view>
+    </view>
+  </view>
+  <image src="http://appi.taoxiaobao.top/imgs/lottery.png"  mode="widthFix" class="mailer"></image>
+</view>

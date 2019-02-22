@@ -1,0 +1,43 @@
+
+<view class="menu">
+    <scroll-view scroll-x="true" class="top-nav">
+      <view bindtap="swichNav" data-current="0" class="top-btn {{currentTab==0 ? 'on' : ''}}">全部</view>
+      <view bindtap="swichNav" data-current="1" class="top-btn {{currentTab==1 ? 'on' : ''}}">女装</view>
+      <view bindtap="swichNav" data-current="2" class="top-btn {{currentTab==2 ? 'on' : ''}}">男装</view>
+      <view bindtap="swichNav" data-current="3" class="top-btn {{currentTab==3 ? 'on' : ''}}">鞋包配饰</view>
+      <view bindtap="swichNav" data-current="4" class="top-btn {{currentTab==4 ? 'on' : ''}}">美妆</view>
+      <view bindtap="swichNav" data-current="5" class="top-btn {{currentTab==5 ? 'on' : ''}}">母婴</view>
+      <view bindtap="swichNav" data-current="6" class="top-btn {{currentTab==6 ? 'on' : ''}}">食品</view>
+      <view bindtap="swichNav" data-current="7" class="top-btn {{currentTab==7 ? 'on' : ''}}">内衣</view>
+      <view bindtap="swichNav" data-current="8" class="top-btn {{currentTab==8 ? 'on' : ''}}">家电数码</view>
+      <view bindtap="swichNav" data-current="9" class="top-btn {{currentTab==9 ? 'on' : ''}}">居家</view>
+      <view bindtap="swichNav" data-current="10" class="top-btn {{currentTab==10 ? 'on' : ''}}">文体</view>
+
+
+    </scroll-view>
+</view>
+<view class="ranking">
+  <view bindtap="swichRank" data-current="0" class="aniu all_rank {{currentRank==0 ? 'on' : ''}}">人气排名 <view class="sc">{{sc_text[sc_number]}}</view></view>
+  <view bindtap="swichRank" data-current="1" class="aniu number_rank {{currentRank==1? 'on' : ''}}">销量排名<view class="sc">降序</view></view>
+  <view bindtap="swichRank" data-current="2" class="aniu price_rank {{currentRank==2 ? 'on' : ''}}">价格排名<view class="sc">{{sc_text[sc_number]}}</view></view>
+  <view bindtap="swichRank" data-current="3" class="aniu quan_rank {{currentRank==3 ? 'on' : ''}}">最新排名<view class="sc">{{sc_text[sc_number]}}</view></view>
+</view>
+
+<view  class='all-goods'>
+    <view wx:for="{{couponList}}" wx:key="item.ItemID" bindtap="setCouponInfo" data-index="{{index}}" class="goods-item">
+         <image src="{{item.goods_pic}}" mode="widthFix" lazy-load="true"></image> 
+         <view class="goods-content">
+         <view class="goods-title"><image  class="jd" src="../../images/jd.png" wx:if="{{!loging}}"></image>{{item.goods_short_title}}</view>
+          <view class="goods-price">
+            <view class="goods-original six">原价：￥{{item.goods_price}}</view>
+            <view class="fr six">销量：{{item.goods_sales}}</view>
+          </view>
+          <view class="goods-discounts">
+            <view class="goods-Qprice">{{item.coupon_price}}元</view>
+            <view class="fr red">券后：{{item.quanhou}}</view>
+          </view>
+        </view>
+    </view><!--wx:for-->
+  </view><!--/.all-goods-->
+  <loading hidden="{{hiddenLoading}}">正在加载</loading>
+

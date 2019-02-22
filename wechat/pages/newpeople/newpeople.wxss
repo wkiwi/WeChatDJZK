@@ -1,0 +1,8 @@
+/* pages/newpeople/newpeople.wxss */
+page{font-size:30rpx;}
+.content{width:690rpx;padding:30rpx;overflow:hidden}
+.imgs{overflow:hidden;}
+.content image{width:690rpx;}
+textarea{width:620rpx;height:190rpx;margin-top:50rpx;border:1px solid #ccc;padding:30rpx;border-radius:8rpx;}
+.tip{text-align: center;font-size:25rpx;}
+.btn{width:200rpx;margin:30rpx auto;padding:10rpx 15rpx;background:#f40;text-align: center;color:#fff;border-radius: 8rpx;}

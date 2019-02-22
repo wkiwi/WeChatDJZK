@@ -1,0 +1,66 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/logs/logs",
+    "pages/detail/detail",
+    "pages/details/details",
+    "pages/chaojisou/chaojisou",
+    "pages/evaluate/evaluate",
+    "pages/usage/usage",
+    "pages/wuxian/wuxian",
+    "pages/kefu/kefu",
+    "pages/jiaocheng/jiaocheng",
+    "pages/cart/cart",
+    "pages/specification/specification",
+    "pages/lottery/lottery",
+    "pages/addlottery/addlottery",
+    "pages/lotteryHistory/lotteryHistory",
+    "pages/allLottery/allLottery",
+    "pages/newpeople/newpeople",
+    "pages/agent/agent",
+    "pages/index/index",
+    "pages/search/search",
+    "pages/user/user",
+    "pages/classify/classify",
+    "pages/myFavorite/myFavorite",
+    "pages/myCustomer/myCustomer"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fefefe",
+    "navigationBarTitleText": "首页",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#929292",
+    "backgroundColor": "#ffffff",
+    "selectedColor": "#ff3c29",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/home1.png",
+        "selectedIconPath": "images/select_home.png"
+      },
+      {
+        "pagePath": "pages/search/search",
+        "text": "查券",
+        "iconPath": "images/quan1.png",
+        "selectedIconPath": "images/select_quan.png"
+      },
+      {
+        "pagePath": "pages/classify/classify",
+        "text": "商品分类",
+        "iconPath": "images/lei.png",
+        "selectedIconPath": "images/select_lei.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "images/user.png",
+        "selectedIconPath": "images/select_user.png"
+      }
+    ]
+  }
+}

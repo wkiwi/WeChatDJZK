@@ -1,0 +1,98 @@
+{
+	"description": "项目配置文件。",
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "1.9.93",
+	"appid": "wxeacca8b837d0c7bb",
+	"projectname": "%E7%8B%AC%E5%AE%B6%E6%8A%98%E6%89%A3",
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 6,
+			"list": [
+				{
+					"id": 0,
+					"name": "启动页",
+					"pathName": "pages/index/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "抽奖",
+					"pathName": "pages/lottery/lottery",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "添加抽奖",
+					"pathName": "pages/addlottery/addlottery",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "抽奖历史",
+					"pathName": "pages/lotteryHistory/lotteryHistory",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "新用户",
+					"pathName": "pages/newpeople/newpeople",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "上传图片",
+					"pathName": "pages/uploadImg/uploadImg",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "我的",
+					"pathName": "pages/user/user",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "代理",
+					"pathName": "pages/agent/agent",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "代理收益",
+					"pathName": "pages/myFavorite/myFavorite",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "管理我的客户",
+					"pathName": "pages/myCustomer/myCustomer",
+					"query": ""
+				}
+			]
+		}
+	}
+}

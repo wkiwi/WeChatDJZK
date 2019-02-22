@@ -1,0 +1,5 @@
+.page{padding:30rpx;width:690rpx;}
+.title{text-align: center;margin-bottom:50rpx}
+.all_img{overflow:hidden;width:690rpx;}
+.all_img image{width:65rpx;border:1px solid #C7FCFA}
+.img-border{float:left;width:69rpx;height:69rpx;margin-bottom:10rpx;overflow:hidden;}

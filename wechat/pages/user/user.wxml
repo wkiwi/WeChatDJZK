@@ -1,0 +1,101 @@
+<!--index.wxml-->
+<view class="user-container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+</view>
+
+ <view class='sign-day'>
+  <view class="sign-day-title">每日签到</view>
+  <view class="sign-day-content">
+    <view class="jifen fl">累计积分 : {{integral}}</view>
+    <view class="sign-day-btn fl">
+      <!-- <view class="btn" bindtap='sings'>签到</view>   -->
+        <form bindsubmit='sings' report-submit='true'>
+          <button form-type="submit" class="btn">{{sign==true?'签到':'已签到'}}</button>
+        </form>
+    </view>
+  </view>
+</view> 
+<view class="all-tool" wx:if="{{loging}}">
+  <view class="all-tool-title">我的工具</view>
+  <view class="all-tool-content">
+     <view class="dingdan fl" bindtap='tools'>
+      <view class="border">
+      <image src="http://api.taoxiaobao.top/imgs/tool/tool-1.png" ></image>
+      <view>我的订单</view>
+      </view>
+    </view>
+    <view class="dingdan fl" bindtap='lottery'>
+      <view class="border">
+        <image src="http://api.taoxiaobao.top/imgs/tool/tool-2.png" ></image>
+        <view>抽奖</view>
+      </view>
+    </view>
+    <view class="dingdan fl" bindtap='newpeople'>
+      <view class="border">
+        <image src="http://api.taoxiaobao.top/imgs/tool/tool-3.png" ></image>
+        <view>新用户免单</view>
+      </view>
+    </view>
+     <view class="dingdan fl" bindtap='biaoqing'>
+      <view class="border">
+        <image src="http://api.taoxiaobao.top/imgs/tool/tool-8.png" ></image>
+        <view>小程序设置</view>
+      </view>
+    </view>  
+    <view class="dingdan fl" bindtap='kefu'>
+      <view class="border">
+        <image src="http://api.taoxiaobao.top/imgs/tool/tool-5.png" ></image>
+        <view>联系客服</view>
+      </view>
+    </view>
+    <view class="dingdan fl" >
+      <view class="border">
+      <button  open-type="share" style="overflow:inherit" class="zhuan">
+        <image src="http://api.taoxiaobao.top/imgs/tool/tool-6.png" ></image>
+        <view>分享转发</view>
+      </button>
+      </view>
+    </view>
+    <view class="dingdan fl" bindtap='jiaocheng'>
+      <view class="border">
+        <image src="http://api.taoxiaobao.top/imgs/tool/tool-7.png" ></image>
+        <view>查券教程</view>
+      </view>
+    </view>
+    <view class="dingdan fl" bindtap='specification'>
+      <view class="border">
+        <image src="http://api.taoxiaobao.top/imgs/tool/tool-4.png" ></image>
+        <view>操作说明</view>
+      </view>
+    </view>
+  </view><!--/.all-tool-content-->
+
+
+</view><!--/.all-tool-->
+   <view  wx:if="{{admin}}" class="admin">
+      <view class="machine fl">
+        <view  bindtap='addlottery'>去开奖（去抽奖）</view>
+      </view>
+      <view class="machine fr">
+        <view   bindtap='myCustomer'>管理代理</view>
+      </view>
+  </view> 
+
+   <view class="daili" wx:if="{{loging}}">
+      <view class="apply-daili" bindtap='agent'>申请成为代理人</view> 
+   </view>  
+    <view wx:if="{{daili}}">
+      <view bindtap='myFavorite' class="myFavorite">我的收益</view> 
+    </view>
+ <view class="version">V 1.0.2.0</view> 
+<!-- <view class="kefu">
+<image src="http://api.taoxiaobao.top/chushou/0/images/4.png" bindtap='previewImage' data-src="http://api.taoxiaobao.top/chushou/0/images/4.png" mode="widthFix"></image>
+<view>关于领券任何问题都可以联系客服，为您一对一服务</view>
+</view> -->
+

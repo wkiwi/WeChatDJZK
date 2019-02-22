@@ -1,0 +1,25 @@
+<!--pages/agent/agent.wxml-->
+<form bindsubmit="formSubmit" report-submit='true' wx:if="{{!apply}}">
+    <view class="tip">姓名</view>
+    <input class="input"  placeholder="请输入您的真实姓名" name="name"/>
+    <view class="tip">支付宝</view>
+    <input class="input" placeholder="请输入您的支付宝账号" name="zfb"/>
+    <view class="tip">微信</view>
+    <input class="input" placeholder="请输入您的微信账号" name="wx"/>
+    <view class="tip">手机号</view>
+    <input  class="input" placeholder="请输入您的手机账号" name="phone"/>
+    <view class="tip">申请理由</view>
+    <textarea class="input" placeholder="请输入您的申请理由" name="argument"></textarea> 
+
+    <button   formType="submit" disabled='{{applying}}'> {{applytext}}</button>
+
+</form>
+<view wx:if="{{apply}}" class="agented">
+  <view class="tip">尊敬的 {{name}}（先生/女士）您好！恭喜您已经成为代理，快去推广一起赚钱吧！</view> 
+  <!-- <view class="gg">编号：{{id}} </view>     -->
+  <view class="gg">广告位id：{{ggid}} 已锁定</view>  
+  <view class="all-fans">累计推广粉丝量 : {{fans}}</view>
+  <button  open-type="share">拉取我的粉丝</button>
+  <button class="pic" bindtap='ercode'>生成代理专属推广码</button>
+  <image wx:if="{{pic}}" src="{{codefile}}" data-src="{{codefile}}" bindtap='previewImage'mode="widthFix"></image>
+</view>

@@ -1,0 +1,8 @@
+<view class="page">
+  <view class="title">共有 {{usernumber}} 位参与者</view>
+    <view class="all_img" >
+      <view class="img-border" wx:for="{{usermessage}}">
+      <image  src="{{item.user_image}}" mode="widthFix" lazy-load="true"></image>
+      </view>    
+    </view>
+</view>

@@ -1,0 +1,18 @@
+<view class="lines">
+<view class="fl numbers">序号</view>
+<view class="fl ">头像（呢称）</view>
+<view class="fr">中奖内容（时间）</view>
+</view>
+
+<view class="line" wx:for="{{lotterys}}">
+  <view class="number fl">{{index+1}}</view>
+  
+  <view class="userImg fl">
+    <image src="{{item.user_image}}" mode="widthFix"></image>
+    <view class="userName ">{{item.user_name}}</view>
+  </view>
+  <view class="fr details">
+    <view class="lottery ">{{item.lottery_name}}</view>
+    <view class="time ">{{item.lottery_time}}</view>
+   </view>
+</view>

@@ -1,0 +1,11 @@
+/* pages/agent/agent.wxss */
+page{padding:30rpx;background:#f1f1f1;font-size:30rpx;width:690rpx;}
+.input{width:640rpx;height:50rpx;line-height:50rpx;margin:30rpx 0;border:1px solid #f1f1f1;padding:10rpx 20rpx;border-radius:10rpx;}
+button{width: 300rpx;margin:50rpx auto;background:linear-gradient(to right,#FF9800,#FF2420);color:#fff}
+textarea.input{height:150rpx;display:block}
+.agented{font-size:35rpx;margin-top:100rpx;text-align: center;}
+.agented .tip{color:#f40;}
+.agented .gg{margin-top:100rpx;color:#aaa}
+.pic{margin-top:50rpx;}
+image{width:690rpx;}
+.all-fans{margin-top:30rpx;}

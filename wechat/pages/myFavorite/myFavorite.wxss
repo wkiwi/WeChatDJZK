@@ -1,0 +1,22 @@
+/* pages/myFavorite/myFavorite.wxss */
+page{font-size:30rpx;}
+.box{overflow:hidden;background:#fff;padding:30rpx 0;margin-bottom:20rpx;}
+.money{font-size:35rpx;line-height:70rpx;height:70rpx;margin:30rpx auto;width:350rpx;border-bottom:1px dotted #fafafa;}
+.total-money{color:#f40;}
+.number{line-height:70rpx;border-bottom:1px dotted #fafafa;}
+.order-number{width:345rpx;text-align: center}
+.order-number .title{font-size:35rpx;}
+.order-number .number{color: #f40}
+.fans-number{width:345rpx;text-align: center}
+.fans-number .title{font-size:35rpx;}
+.fans-number .number{color: #f40}
+
+.one-order{background: #fff;margin-bottom:20rpx;width:710rpx;padding:20rpx;overflow:hidden;}
+.goods-title{  white-space: nowrap;word-break: keep-all;text-overflow: ellipsis;overflow:hidden;color:#333;}
+.order-shop-title{color:#ccc;font-size:25rpx}
+.content{margin-top:20rpx;overflow:hiddeen;font-size:25rpx;line-height:50rpx;}
+.fkje{text-align: center;width:345rpx;}
+.fkje .order-money{font-weight: bold;color:#000}
+.ygsr{text-align: center;width:345rpx;}
+.ygsr .order-money{font-weight: bold;color:#000}
+.create-time{font-size:25rpx;color:#ccc}

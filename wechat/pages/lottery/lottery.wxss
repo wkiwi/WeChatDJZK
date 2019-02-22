@@ -1,0 +1,34 @@
+page{font-size:35rpx;line-height:50rpx;color: #333;position:relative;}
+.container{padding:20rpx;background:#fff}
+.title{text-align: center;margin-bottom:30rpx;}
+.time{color:#666;font-size:25rpx;}
+.btn{width:250rpx;height:250rpx;border-radius:125rpx;background:#f50;text-align: center;line-height: 250rpx;font-size:45rpx;margin:130rpx auto;margin-bottom:50rpx;color:#fff; box-shadow:0 0 50rpx rgba(255,85,0, .5);  }
+
+.people_number{text-align: center;color:#666;font-size:25rpx;}
+.all_people{display:inline;color:#0F92E4;}
+.all_img{overflow:hidden;width:690rpx;}
+.all_img image{width:65rpx;border:1px solid #C7FCFA}
+.img-border{float:left;width:69rpx;height:69rpx;margin-bottom:10rpx;overflow:hidden;}
+.specification{width:690rpx;background:#fff;padding:30rpx;font-size:25rpx;min-height:800rpx;}
+.s_title{text-align:center;font-size:40rpx;}
+.history{color:#0F92E4;text-align: center;}
+.lottery_box{position:fixed;bottom:20rpx;left:20rpx;width:710rpx;height:1000rpx;z-index: 100;border-top-left-radius: 10rpx;border-top-right-radius: 10rpx;overflow: hidden;}
+.mailer{width:100%;position:absolute;bottom:0;z-index: 101;}
+.lottery_box_container{width:694rpx;padding:10rpx 8rpx;height:960rpx;background: #FEFEFE;}
+.lottery_box_container_main{margin:30rpx;width:574rpx;height:820rpx;border:1px solid #D5C47F;padding:30rpx;position:relative;}
+.main_title{text-align: center;color:#D5C47F;font-size:40rpx;line-height: 60rpx;}
+.lottery_users{overflow:hidden;margin:0 auto;}
+.user_box{width:150rpx;margin:20rpx;text-align: center;overflow: hidden;}
+.user_box_img{width:80rpx;border-radius: 40rpx;overflow:hidden;margin:0 auto; }
+.user_box_img image{width:80rpx;border-radius: 40rpx;display:block;}
+.user_box_name{font-size:20rpx;margin-top:10rpx;}
+.closed{position:absolute;right:10rpx;top:10rpx;width:50rpx;}
+.zhezhao{position:absolute;width:100%;height:100%;background:agba(0,0,0,0.9)}
+
+.tips{text-align: center;margin-top:30rpx;font-size:25rpx;}
+.nextlottery{text-align: center;color:#f50;margin-top:50rpx;}
+.sharepic{position:absolute;top:20rpx;right:20rpx;background-color:rgba(255,255,255,0.9);border:1px solid #666;padding:8rpx 12rpx;color:#aaa;font-size:25rpx;}
+.canvas-father{opacity:0;position:fixed;left:-3000px;z-index:-70;}
+.message{padding:30rpx;background:#fff;border-bottom:1px dotted #ccc;}
+.message-title{text-align: center;}
+.message text{font-size:25rpx;}

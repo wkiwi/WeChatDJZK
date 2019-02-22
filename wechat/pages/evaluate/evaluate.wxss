@@ -1,0 +1,12 @@
+.page{padding:20rpx;color:#aaa;font-size:30rpx;}
+.evaluateAll{color:#aaa; font-size:20rpx;padding:20rpx;overflow: hidden;width:710rpx;}
+.evaluate{text-align: center;font-size:30rpx;}
+.evaluateName{height:50rpx;line-height:50rpx;font-size:25rpx;float:left}
+.evaluateContent{font-size:30rpx;color:#333;padding:15rpx 10rpx;line-height:40rpx;}
+.evaluateDate{margin-right:30rpx;float:right;line-height:50rpx;}
+.evaluateCanshu{float:left;margin-top:20rpx;}
+.evaluateMore{text-align: center;display: inline-block;border:1px solid #ccc;padding:10rpx;color:#555;border-radius:10rpx;margin:15rpx 270rpx;}
+.clear {clear: both;}
+.user{padding-bottom:20rpx;border-bottom:1px solid #ddd;margin:15rpx 0rpx;}
+.min_img{width:225rpx; height:225rpx;float:left;overflow:hidden;margin:5rpx;}
+.allPic{overflow:hidden;margin-top:20rpx;}

@@ -1,0 +1,51 @@
+<!--pages/search/search.wxml-->
+
+<!-- <image class="chaojisou" src="../../images/chaojisou.png" mode="widthFix"></image> -->
+
+<view class="search-background">
+ <view class="search">
+    <input class="search-input" value="{{inputContent}}" placeholder="输入关键字搜索" bindinput="bindInputChange" bindconfirm="selectByItemName" />
+    <label class="search-label">
+      <image class="search-img" src="../../images/search.png" bindtap="selectByItemName" ></image>
+    </label>
+  </view><!--输入框-->
+</view>
+<view class="sou-or-chaoji">
+      <view class="sou fl  {{souchaoji==0?'on':''}}" bindtap="sou">内部搜</view>
+      <view class="chaoji fl {{souchaoji==1?'on':''}}" bindtap="chaoji">超级搜</view>
+      <view class="all-tip" wx:if="{{tip&loging}}" bindtap='closetip'>
+          <image class="tip-jiao" src="../../images/jiao.png"></image>
+          <view class="tip-content">
+              <view class="tip-content-title">温馨提示</view>
+              <view class="tip-content-text"><text class="kong">  </text> 内部搜和超级搜是可以切换的呦，内部搜可以对搜索数据进行自主排名显示，超级搜是进行全网搜索，可以查到隐藏优惠券，但不能对数据进行自主排名显示。（{{ daojishi }} 秒后自动关闭或点击直接关闭）。</view>
+          </view>
+      </view>
+</view><!--优品搜或超级搜-->
+<view class="all-hotwords">
+    <view class="all-hotwords-header">
+      <view class="fl">大家都在搜</view>
+      <view class="fr" bindtap='nextHot'>换一组</view>
+    </view>
+    <view class="all-hotwords-content">
+      <view wx:for="{{hotwords[page]}}" class="hot fl"  >
+        <view bindtap='CHot' data-text="{{item.word}}">
+         {{item.word}}
+         </view>
+      </view>
+    </view>
+</view>
+
+<view class="search-history all-hotwords">
+   <view class="all-hotwords-header">
+      <view class="fl">搜索历史</view>
+      <view class="fr" bindtap='removehistory'>清空</view>
+    </view>
+    <view class="all-hotwords-content">
+      <view wx:for="{{historyhot}}" class="hot fl">
+        <view bindtap='CHot' data-text="{{item}}">
+         {{item}}
+         </view>
+      </view>
+    </view>
+</view> 
+ <image class="course" src="http://appi.taoxiaobao.top/imgs/course.jpg" mode="widthFix" wx:if="{{loging}}"></image> 

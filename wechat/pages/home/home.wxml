@@ -1,0 +1,19 @@
+ <view   class="container">
+  <view class="one {{ view[0].in }} {{ view[0].out }}" style="width: 100%; height: 100%">
+  <image class="one-one {{ one_one }}" src="../../images/12.jpg"></image>
+  <view class="one-three {{ one_three }}">Welcome</view>
+  <view class="one-four {{ one_four }}" bindtap="jumpto">进入使用</view>
+  <view class="one-five {{ one_five }}"> </view>
+  </view>
+
+  <image class="bottom-top {{ bottom_top }}" src="../../images/5.png"></image>
+  <image class="bottom-one {{ bottom_one }}" src="../../images/1.png"></image>
+  <image class="bottom-one2 {{ bottom_one }}" src="../../images/1.png"></image>
+  <image class="bottom-two {{ bottom_two }}" src="../../images/11.png"></image>
+  <image class="bottom-two2 {{ bottom_two }}" src="../../images/11.png"></image>
+  <image class="bottom-three {{ bottom_three }}" src="../../images/12.png"></image>
+  <image class="bottom-three2 {{ bottom_three }}" src="../../images/12.png"></image>
+  <image class="bottom-four {{ bottom_four }}" src="../../images/10.png"></image>
+  <image class="bottom-four2 {{ bottom_four }}" src="../../images/10.png"></image>
+</view> 
+ 

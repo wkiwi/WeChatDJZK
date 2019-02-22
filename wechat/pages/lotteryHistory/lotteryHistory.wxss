@@ -1,0 +1,8 @@
+page{font-size:30rpx;padding:30rpx;width:690rpx;}
+.lines{overflow:hidden;border-bottom:1px solid #ddd;line-height:100rpx;height:100rpx;}
+.line{height:150rpx;padding:20rpx;border-bottom:1px dashed #ddd;overflow:hidden;}
+.number{line-height:150rpx;margin-right:50rpx;}
+.numbers{margin-right:50rpx;}
+.userImg{width:200rpx;text-align: center}
+.userImg image{width:80rpx;display:block;border-radius:40rpx;overflow:hiddem;margin:0 auto;margin-bottom:20rpx;}
+.details{text-align: right;line-height:75rpx;}

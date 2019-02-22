@@ -1,0 +1,3 @@
+page{color:#666;font-size:25rpx;line-height:50rpx;padding:30rpx;}
+.title{color:#000;font-size:35rpx;margin:40rpx 0;}
+.text{width:690rpx;}

@@ -1,0 +1,183 @@
+<view>
+  <loading hidden="{{hiddenLoading}}">正在加载</loading><!--加载demo-->
+  <view class="top-search" bindtap='tosearch'>
+    <view class="search">
+    <input class="search-input" value="{{inputContent}}" placeholder="输入你要找的宝贝标题" bindinput="bindInputChange" bindconfirm="selectByItemName" />
+    <label class="search-label">
+      <image class="search-img" src="../../images/search.png" bindtap="selectByItemName" ></image>
+    </label>
+  </view><!--输入框-->
+  </view>
+  <swiper class="home_swiper" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{img}}">
+    <swiper-item>
+      <image src="{{item}}"  data-giid="{{data_giid[index-2]}}" bindtap="clickBanner"/>
+    </swiper-item>
+  </block>
+  </swiper><!--轮播图-->
+  <view class="index-cart" wx:if="{{loging}}">
+    <view class="index-cart-box fl">
+      <navigator url="../cart/cart?new=0&cat=10&is_tqg=0&is_ju=0&max_price=100000&title=女装">
+      <view class="index-cart-box-img">
+        <image  src="http://appi.taoxiaobao.top/imgs/cart-3/cart-1.png" mode="widthFix"></image>
+      </view>
+      <view class="index-cart-box-text">女装</view>
+      </navigator>
+    </view>
+    <view class="index-cart-box fl">
+      <navigator url="../cart/cart?new=0&cat=12&is_tqg=0&is_ju=0&max_price=100000&title=男装">
+      <view class="index-cart-box-img">
+        <image  src="http://appi.taoxiaobao.top/imgs/cart-3/cart-2.png" mode="widthFix"></image>
+      </view>
+      <view class="index-cart-box-text">男装</view>
+      </navigator>
+    </view>
+    <view class="index-cart-box fl">
+      <navigator url="../cart/cart?new=0&cat=11&is_tqg=0&is_ju=0&max_price=100000&title=内衣">
+      <view class="index-cart-box-img">
+        <image  src="http://appi.taoxiaobao.top/imgs/cart-3/cart-3.png" mode="widthFix"></image>
+      </view>
+      <view class="index-cart-box-text">内衣</view>
+      </navigator>
+    </view>
+    <view class="index-cart-box fl">
+      <navigator url="../cart/cart?new=0&cat=2&is_tqg=0&is_ju=0&max_price=100000&title=母婴">
+      <view class="index-cart-box-img">
+        <image  src="http://appi.taoxiaobao.top/imgs/cart-3/cart-4.png" mode="widthFix"></image>
+      </view>
+      <view class="index-cart-box-text">母婴</view>
+      </navigator>
+    </view>
+    <view class="index-cart-box fl">
+      <navigator url="../cart/cart?new=0&cat=3&is_tqg=0&is_ju=0&max_price=100000&title=美妆">
+      <view class="index-cart-box-img">
+        <image  src="http://appi.taoxiaobao.top/imgs/cart-3/cart-5.png" mode="widthFix"></image>
+      </view>
+      <view class="index-cart-box-text">美妆</view>
+      </navigator>
+    </view>
+    <view class="index-cart-box fl">
+      <navigator url="../cart/cart?new=0&cat=4&is_tqg=0&is_ju=0&max_price=100000&title=居家">
+      <view class="index-cart-box-img">
+        <image  src="http://appi.taoxiaobao.top/imgs/cart-3/cart-6.png" mode="widthFix"></image>
+      </view>
+      <view class="index-cart-box-text">居家</view>
+      </navigator>
+    </view>
+    <view class="index-cart-box fl">
+      <navigator url="../cart/cart?new=0&cat=5&is_tqg=0&is_ju=0&max_price=100000&title=鞋包">
+      <view class="index-cart-box-img">
+        <image  src="http://appi.taoxiaobao.top/imgs/cart-3/cart-7.png" mode="widthFix"></image>
+      </view>
+      <view class="index-cart-box-text">鞋包</view>
+      </navigator>
+    </view>
+    <view class="index-cart-box fl">
+      <navigator url="../cart/cart?new=0&cat=6&is_tqg=0&is_ju=0&max_price=100000&title=美食">
+      <view class="index-cart-box-img">
+        <image  src="http://appi.taoxiaobao.top/imgs/cart-3/cart-8.png" mode="widthFix"></image>
+      </view>
+      <view class="index-cart-box-text">美食</view>
+      </navigator>
+    </view>
+    <view class="index-cart-box fl">
+      <navigator url="../cart/cart?new=0&cat=7&is_tqg=0&is_ju=0&max_price=100000&title=文体">
+      <view class="index-cart-box-img">
+        <image  src="http://appi.taoxiaobao.top/imgs/cart-3/cart-9.png" mode="widthFix"></image>
+      </view>
+      <view class="index-cart-box-text">文体</view>
+      </navigator>
+    </view>
+    <view class="index-cart-box fl">
+      <navigator url="../cart/cart?new=0&cat=8&is_tqg=0&is_ju=0&max_price=100000&title=数码">
+      <view class="index-cart-box-img">
+        <image  src="http://appi.taoxiaobao.top/imgs/cart-3/cart-10.png" mode="widthFix"></image>
+      </view>
+      <view class="index-cart-box-text">数码</view>
+      </navigator>
+    </view>
+  </view><!--主页下的分类-->
+
+    <view class="index-money" wx:if="{{loging}}">
+    <view class="index-money-99 fl" bindtap='tosearch'>
+      <image  src="http://appi.taoxiaobao.top/imgs/cart-3/index-lingquan.png"  mode="widthFix" lazy-load="true"></image>
+    </view>
+    <navigator url="../cart/cart?new=0&cat=0&is_tqg=0&is_ju=0&max_price=30&title=30元封顶">
+    <view class="index-money-30 fl" >
+      <image  src="http://appi.taoxiaobao.top/imgs/cart-3/index-30.png"  mode="widthFix" lazy-load="true"></image>
+    </view>
+    </navigator>
+  </view><!--9.9封顶 和30元-->
+  <view class="broadcast" wx:if="{{loging}}">
+      <image  src="http://api.taoxiaobao.top/imgs/icon/laba.png"></image>
+      <view class="broadcast-text-box">
+        <swiper  autoplay="true" circular="true" interval="3000" vertical='true' duration="400">
+          <block wx:for="{{msgList}}">
+            <swiper-item>
+            <view class="broadcast-text">{{item.title}}</view>
+            </swiper-item>
+          </block>
+        </swiper>
+          <!-- <view class="broadcast-text">1234556789</view>
+          <view class="broadcast-text">1234556789</view>
+   -->
+      </view>
+  </view><!--广播-->
+  <!-- <view class="broadcast">
+   <image  src="http://api.taoxiaobao.top/imgs/icon/laba.png"></image>
+    <view class="broadcast-text-box">
+      <view class="broadcast-txt" style="width:{{guangbo}}px;left:{{guangboleft}}px">{{guangbotext}}</view>
+    </view>
+  </view> -->
+  <view class="new-ju-tao" wx:if="{{loging}}">
+    <view class="fl">
+    <navigator url="../cart/cart?new=0&cat=0&is_tqg=1&is_ju=0&max_price=100000&title=淘抢购">
+      <image src="http://appi.taoxiaobao.top/imgs/cart-3/taoqianggou.jpg" mode="widthFix"></image>
+    </navigator>
+    </view><!--/.fl-content-->
+     <view class="fr">
+        <view class="fr-top">
+          <navigator url="../cart/cart?new=0&cat=0&is_tqg=0&is_ju=1&max_price=100000&title=聚划算">
+          <image src="http://appi.taoxiaobao.top/imgs/cart-3/juhuasuan.jpg" mode="widthFix"></image>
+          </navigator>
+        </view><!--/.fr-top-->
+        <view class="fr-bottom">
+          <view class="fr-bottom-fl fl">
+          <navigator url="../cart/cart?new=1&cat=0&is_tqg=0&is_ju=0&max_price=100000&title=每日上新">
+            <image src="http://appi.taoxiaobao.top/imgs/cart-3/newgoods.jpg" mode="widthFix"></image>
+          </navigator>
+          </view><!--/.fr-bottom-fl-->
+          <view class="fr-bottom-fr fr">
+          <navigator url="../cart/cart?new=0&cat=0&is_tqg=0&is_ju=0&max_price=10&title=9块9包邮">
+            <image src="http://appi.taoxiaobao.top/imgs/cart-3/9kuai9.jpg" mode="widthFix"></image>
+            </navigator>
+          </view><!--/.fr-bottom-fr-->
+        </view><!--/.fr-bottom-->
+     </view><!--/.fr-->
+  </view><!--/.new-ju-tao-->
+  
+  <view class="daytitle">每日精选</view><!--商品标题-->
+  <view  class='all-goods'>
+    <view wx:for="{{couponList}}" wx:key="item.ItemID" bindtap="setCouponInfo" data-index="{{index}}" class="goods-item">
+         <image src="{{item.goods_pic}}" mode="widthFix" lazy-load="true"></image> 
+         <view class="goods-content">
+         <view class="goods-title"><image  class="jd" src="../../images/jd.png" wx:if="{{!loging}}"></image>{{item.goods_short_title}}</view>
+          <view class="goods-price">
+            <view class="goods-original six">原价：￥{{item.goods_price}}</view>
+            <view class="fr six">销量：{{item.goods_sales}}</view>
+          </view>
+          <view class="goods-discounts">
+            <view class="goods-Qprice">{{item.coupon_price}}元</view>
+            <view class="fr red">券后：{{item.quanhou}}</view>
+          </view>
+        </view>
+    </view><!--wx:for-->
+  </view><!--/.all-goods-->
+</view>
+
+
+<view class="tips" wx:if="{{tips}}">
+  <image src="http://appi.taoxiaobao.top/imgs/tips.png"  mode="widthFix" bindtap='closetips'></image>
+  <view class="block"></view>
+</view>
+

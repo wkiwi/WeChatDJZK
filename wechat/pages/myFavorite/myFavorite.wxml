@@ -1,0 +1,33 @@
+<!-- <view class="box money">
+  <view class="fl">累计收益</view>
+  <view class="fr total-money">{{allmoney}}元</view>
+</view> -->
+<view class="box number">
+    <view class="fl order-number">
+      <view class="title">累计推广订单量</view>  
+      <view class="number">{{orderNumber}}</view>
+    </view>
+    <view class="fr fans-number">
+    <view class="title">累计收益</view>
+    <view class="number">{{allmoney}}元</view>
+    </view>
+</view>
+
+<view class="all-order"> 
+  <view class="one-order" wx:for="{{allOrder}}">
+    <view class="goods-title">{{item.goods_title}}</view>
+
+    <view class="order-shop-title">所属店铺：{{item.shop}}</view>
+    <view class="content">
+      <view class="fl fkje">
+        <view>付款金额</view>
+        <view class="order-money">{{item.price}}</view>
+      </view>
+      <view class="fr ygsr">
+        <view>成交预估收入</view>
+        <view class="order-money">{{item.xiaoguo}}</view>
+      </view>
+    </view>
+    <view class="create-time">{{item.create_time}} 创建</view>
+  </view>
+</view>

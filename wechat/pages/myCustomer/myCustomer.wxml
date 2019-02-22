@@ -1,0 +1,21 @@
+<view class="th">
+  <view class="fl td td-1">id</view>
+  <view class="fl td td-2">姓名</view>
+  <view class="fl td td-3">状态</view>
+  <view class="fl td td-4">比率</view>
+  <view class="fl td td-5">pid</view>
+  <view class="fl td td-6">广告位id</view>
+  <view class="fl td td-7">处理</view>
+</view>
+
+<view class="tr" wx:for="{{allAgent}}">
+  <view class="fl td td-1">{{item.id}}</view>
+  <view class="fl td td-2">{{item.name}}</view>
+  <view class="fl td td-3" style="color:{{item.type==0?'red':'green'}}">{{item.type==0?"审核":"代理"}}</view>
+  <view class="fl td td-4"><input  bindchange="changeRate" value="{{item.rate}}" placeholder='比率'></input> </view>
+  <view class="fl td td-5"><input  bindchange="changePid" value="{{item.pid}}" placeholder='填入代理pid'></input> </view>
+  <view class="fl td td-6"><input bindchange="changeGgid" value="{{item.gg_id}}" placeholder='填入广告位id'></input></view>
+  <view class="fl td td-7" bindtap='agreen' data-id="{{item.id}}" data-index="{{index}}">
+    <view class="btn" style="background:{{item.type==0?'#FF8000':'#FFCE9D'}}">{{item.type==0?'同意':'修改'}}</view>
+  </view>
+</view>

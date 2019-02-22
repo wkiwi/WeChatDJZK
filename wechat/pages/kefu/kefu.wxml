@@ -1,0 +1,9 @@
+<!--pages/kefu/kefu.wxml-->
+
+<image src="http://appi.taoxiaobao.top/djzk/weixin.jpg" bindtap='previewImage' data-src="http://appi.taoxiaobao.top/djzk/weixin.jpg"></image>
+<view class="shuoming">点击上方二维码预览长按保存图片</view>
+<view class="title">你还可以通过下方联系方式联系我！</view>
+<view class="content">
+    <view>QQ:610935700</view>
+    <view>微信:WZ610935700</view>
+</view>

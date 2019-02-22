@@ -1,0 +1,51 @@
+<form bindsubmit="formSubmit" bindreset="formReset">
+
+<view class="change_pic">更换奖品图片</view>
+
+<image src="http://appi.taoxiaobao.top/imgs/lunbo-3.jpg" mode="widthFix" style="width:100%"> </image>
+<view class="container" wx:if="{{!haveorno}}">
+    <view class="line">
+      <view class="fl">奖品名称</view>
+      <input class="fr" placeholder="输入奖品名称信息" name="names"/>
+    </view>
+     <view class="line message">
+      <view >奖品简介</view>
+      <textarea placeholder="输入奖品简介" name="message"></textarea> 
+    </view>
+    <view class="line">
+       <view class="fl ">奖品数量</view>
+       <view class="fr ">个</view>
+       <picker value="{{index}}" range="{{numbers}}"  class="fr" name="number" bindchange='changenumber'>
+          <view class="picker">
+            {{numbers[index]}}
+          </view>
+        </picker>
+       <!-- <input class="fr number"placeholder="数量"/> -->
+
+    </view>
+    <view class="line" >
+        <view class="fl">开奖时间</view>
+        <picker mode="multiSelector" value="{{dateTime1}}" bindchange="changeDateTime1" bindcolumnchange="changeDateTimeColumn1" range="{{dateTimeArray1}}" class="fr time">
+ <view class="tui-picker-detail">
+  {{dateTimeArray1[0][dateTime1[0]]}}-{{dateTimeArray1[1][dateTime1[1]]}}-{{dateTimeArray1[2][dateTime1[2]]}} {{dateTimeArray1[3][dateTime1[3]]}}:{{dateTimeArray1[4][dateTime1[4]]}}
+ </view>
+ </picker>
+        <view class="tip fr">时间不得早于当前时间</view>
+         <input class="fr"placeholder="输入开奖时间"/>
+    </view>    
+</view>
+<view class="container"  wx:if="{{haveorno}}">
+  <view class="title">奖品：{{lotteryDetails.lottery_name}} * {{lotteryDetails.lottery_number}}</view>
+  <view class="times">开奖时间 ： {{lotteryDetails.lottery_time}}</view>
+  <view class="fr usernumber">共参与人数：{{usernumber}}</view>
+  <view class="kaijiang" bindtap='open'>{{lotteryText}}</view>
+</view>
+<view class="container" wx:if="{{!haveorno}}">
+      <view class="tips">没有抽奖活动快去发布一个吧</view>
+</view>
+
+<view class="btn_background" wx:if="{{!haveorno}}">
+    <button class="btn"  formType="submit"> 发起新抽奖</button>
+</view>
+
+</form>

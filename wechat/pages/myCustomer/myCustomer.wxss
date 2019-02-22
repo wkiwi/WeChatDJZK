@@ -1,0 +1,14 @@
+/* pages/myCustomer/myCustomer.wxss */
+page{width:690rpx;padding:30rpx;font-size:30rpx;}
+.th{overflow:hidden;font-size:20rpx;border-bottom:1px dotted #fefefe;padding-bottom:30rpx;}
+.tr{overflow:hidden;font-size:20rpx;height:80rpx;line-height:80rpx;border-bottom:1px solid #fefefe;padding:30rpx 0;}
+.tr input{height:80rpx;line-height:80rpx;}
+.td{text-align: center;width:16%;}
+.td-1{width:50rpx;}
+.td-2{width:70rpx;}
+.td-3{width:70rpx;}
+.td-4{width:70rpx;}
+.td-5{width:200rpx;}
+.td-6{width:120rpx;margin-left:40rpx;}
+.td-7{width:70rpx;}
+.btn{background:#FF8000;border-radius:10rpx;width:50rpx;margin-left:20rpx;color:#fff}
