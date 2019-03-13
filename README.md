@@ -13,6 +13,23 @@
 
 因为微信方面原因，此类优惠券小程序很难上架审核通过，即使审核通过也很容易封号，代码仅供参考。
 
+[同款APP已经上线，可去下载查看](http://down.kiwifruits.cn/)
+
+
+#### 部分页面预览图
+<img src="https://github.com/wkiwi/WeChatDJZK/blob/master/demo/1.jpg" width="365" height="619"/>
+<img src="https://github.com/wkiwi/WeChatDJZK/blob/master/demo/2.jpg" width="365" height="619"/>
+<img src="https://github.com/wkiwi/WeChatDJZK/blob/master/demo/3.jpg" width="365" height="619"/>
+<img src="https://github.com/wkiwi/WeChatDJZK/blob/master/demo/4.jpg" width="365" height="619"/>
+<img src="https://github.com/wkiwi/WeChatDJZK/blob/master/demo/5.jpg" width="365" height="619"/>
+<img src="https://github.com/wkiwi/WeChatDJZK/blob/master/demo/6.jpg" width="365" height="619"/>
+<img src="https://github.com/wkiwi/WeChatDJZK/blob/master/demo/7.jpg" width="365" height="619"/>
+<img src="https://github.com/wkiwi/WeChatDJZK/blob/master/demo/8.jpg" width="365" height="619"/>
+<img src="https://github.com/wkiwi/WeChatDJZK/blob/master/demo/9.jpg" width="365" height="619"/>
+<img src="https://github.com/wkiwi/WeChatDJZK/blob/master/demo/10.jpg" width="365" height="619"/>
+<img src="https://github.com/wkiwi/WeChatDJZK/blob/master/demo/11.jpg" width="365" height="619"/>
+<img src="https://github.com/wkiwi/WeChatDJZK/blob/master/demo/12.jpg" width="365" height="619"/>
+<img src="https://github.com/wkiwi/WeChatDJZK/blob/master/demo/13.jpg" width="365" height="619"/>
 
 #### 简介
 
